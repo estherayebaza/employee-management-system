@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>Simple Employee Record</title>
+   <link rel="stylesheet" href="main.css">
+
+</head>
+<body style="background-color: skyblue">
+	<CENTER><h2>Employee Records</h2></CENTER>
+    <!--Table-->
+    <table>
+        <!--Row-1-->
+        <tr>
+            <!--Column-1-->
+            <td>
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h3>Employee Form</h3>
+                  <!--div-1-->
+                    <div>
+                        <label>Full Name</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="userName" id="userName" placeholder="Enter the user Name">
+                    </div>
+                    <!--div-2-->
+                    <div>
+                        <label>Employee id</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="rollNovalidationError" >This field is required</label>
+                        <!--Input Roll No-->
+                        <input type="text" name="rollNo" id="rollNo" placeholder="Enter the Roll number">
+                    </div>
+                    <!--div-3-->
+                    <div>
+                        <label>Employment department</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="stdClassvalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="text" name="stdClass" id="stdClass" placeholder="Enter the department you are employed in">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Contract time</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="text" name="tsub" id="tsub" placeholder="Enter the total months of employment">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Area of specialisation</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text" name="age" id="age" placeholder="Enter area of specialisation">
+                    </div>
+                    <!--div-6-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="stdlist" style="background-color: #C2976D;">
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <th>Full Name</th>
+                            <th> Employment ID</th>
+                            <th>Employment department</th>
+                            <th>Contract time</th>
+                            <th>Area of specialisation</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+   <script src="app.js"></script>
+</body>
+</html>
